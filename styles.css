@@ -1,0 +1,180 @@
+/* ------------------------------
+   IMPORT FONTS
+------------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300;400;600&display=swap');
+
+/* Luminari is a system font on Mac — for Windows users we’ll fallback */
+h1, h2, h3 {
+    font-family: "Luminari", "Palatino Linotype", serif;
+}
+
+/* all other text */
+body, p, a, li {
+    font-family: "Noto Serif", serif;
+}
+
+/* ------------------------------
+   COLOR PALETTE
+   (from your site plan)
+------------------------------ */
+:root {
+    --bg: #f2c185;
+    --secondary: #b89265;
+    --secondary2: #caa16f;
+    --accent1: #7ad8b2;
+    --accent2: #41a17e;
+}
+
+/* ------------------------------
+   GLOBAL STYLES
+------------------------------ */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg);
+    color: #222;
+}
+
+header {
+    background-color: var(--secondary2);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px solid var(--accent2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8rem;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    margin: 0 12px;
+    text-decoration: none;
+    color: #2b2b2b;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    color: var(--accent2);
+}
+
+/* ------------------------------
+   HERO / INTRO SECTION
+------------------------------ */
+#hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: var(--secondary);
+    color: white;
+}
+
+#hero h2 {
+    font-size: 2.2rem;
+}
+
+/* ------------------------------
+   PARALLAX SECTION (optional)
+------------------------------ */
+/* Add this class to any section with a background image
+   Example in HTML: <section class="parallax" id="characters"> */
+
+.parallax {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+}
+
+/* ------------------------------
+   FEATURE BLOCKS
+------------------------------ */
+.feature {
+    background-color: white;
+    margin: 40px auto;
+    padding: 20px;
+    width: 85%;
+    max-width: 900px;
+    border-left: 6px solid var(--accent1);
+    border-radius: 8px;
+}
+
+/* ------------------------------
+   CHARACTER GRID
+------------------------------ */
+#characters {
+    padding: 40px 20px;
+}
+
+#characters h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#characters .character {
+    background-color: white;
+    border: 2px solid var(--secondary2);
+    padding: 20px;
+    margin: 20px auto;
+    width: 85%;
+    max-width: 800px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+#characters .character:hover {
+    background-color: var(--accent1);
+    border-color: var(--accent2);
+}
+
+/* ------------------------------
+   EPISODES / ABOUT SECTIONS
+------------------------------ */
+#episodes, #about {
+    background: white;
+    width: 85%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 6px solid var(--accent2);
+}
+
+/* ------------------------------
+   FOOTER
+------------------------------ */
+footer {
+    margin-top: 60px;
+    background-color: var(--secondary);
+    text-align: center;
+    padding: 20px;
+    color: white;
+    border-top: 4px solid var(--accent2);
+}
+
+/* ------------------------------
+   RESPONSIVE DESIGN
+------------------------------ */
+@media (min-width: 900px) {
+    /* turn character list into a grid */
+    #characters {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        width: 90%;
+        margin: auto;
+    }
+
+    #characters .character {
+        width: 100%;
+        max-width: none;
+    }
+
+    #hero h2 {
+        font-size: 2.8rem;
+    }
+}
