@@ -9,7 +9,6 @@
 </head>
 <style>
     section {
-        align-items: left;
         text-align: center;
         position: relative;
         padding: 20px;
@@ -21,8 +20,14 @@
     }
 
     section .left img {
-        width: 350px;
+        width: 200px;
         float: left;
+        position: absolute;
+    }
+
+    section .right img {
+        width: 200px;
+        float: right;
         position: absolute;
     }
 </style>
@@ -60,7 +65,7 @@
         <br /><br />
 
         <div class="left">
-            <img style="margin-left: -65%;" src="images/Kasai.png" alt="Kasai">
+            <img class="slow-scroll" style="margin-left: -65%;" src="images/Kasai.png" alt="Kasai">
         </div>
 
 
@@ -103,11 +108,16 @@
         He’s a cheeky one. *walks away*
         <br /><br />
 
+        <div class="right">
+            <img class="slow-scroll" style="margin-left: 47%;" src="images/Gabriel.png" alt="Kasai">
+        </div>
+
         GABE: *smiles and smooths his cheek* Your grandma is the best, man.
         <br /><br />
 
         KASAI: *folds his arms* Yeah, I know. What’re you doing here? Shouldn’t you be in school?
         <br /><br />
+
 
         GABE: *cheekily* Shouldn’t you be at work?
         <br /><br />
@@ -120,6 +130,7 @@
 
         KASAI: *grabs his seat but looks up in realization* Because it’s the last day of school.
         <br /><br />
+
 
         GABE: *finger guns before sliding into a seat* Correct! And since it is currently 11:37 AM and you promised to
         meet us in town before 11:30, you now owe everyone lunch.
@@ -148,6 +159,10 @@
         look what Miguel gave me! *hands it to Gabe*
         <br /><br />
 
+        <div class="left">
+            <img class="slow-scroll" style="margin-left: -65%;" src="images/Lucas.png" alt="Kasai">
+        </div>
+
         GABE: Aw cool, Ryan! A Caverns and Monsters sorcerer! Where’d he find that?
         <br /><br />
 
@@ -163,6 +178,7 @@
 
         RYAN: That’s what I was thinking.
         <br /><br />
+
 
         ANA: *walks up* Geez, there you guys are. We were about to call in the army and have them find you.
         <br /><br />
@@ -312,13 +328,16 @@
         KASAI: *sighs, rubbing his head* I…. I know. But there’s just something weird about that place.
         <br /><br />
 
+        <div class="right">
+            <img class="slow-scroll" style="margin-left: 40%;" src="images/Renee.png" alt="Kasai">
+        </div>
+
         GRANDMA: Hm, well how many people judged you before they got to know you, Kasai?
         <br /><br />
 
         KASAI: ……..
         <br /><br />
         <br /><br />
-
 
         THE NEXT DAY
         <br /><br />
@@ -445,6 +464,10 @@
 
         RIKER: Exactly my point.
         <br /><br />
+        
+        <div class="left">
+            <img class="slow-scroll" style="margin-left: -65%;" src="images/Anauel.png" alt="Kasai">
+        </div>
 
         KASAI: But… they're books! It can’t be that difficult to run a bookstore!
         <br /><br />
@@ -487,6 +510,10 @@
         OUTSIDE
         <br /><br />
         <br /><br />
+
+        <div class="right">
+            <img class="slow-scroll" style="margin-left: 40%;" src="images/Ryan.png" alt="Kasai">
+        </div>
 
         LUCAS: So did you get the job, Kasai?
         <br /><br />
@@ -559,7 +586,9 @@
 
         KASAI: I know I am. *picks up a donut* I better get going, I don’t want to be late.
         <br /><br />
-
+        <div class="left">
+            <img class="slow-scroll" style="margin-left: -63%; width: 300px;" src="images/On_fire.png" alt="Kasai">
+        </div>
         GRANDMA: Alright, Kasai. *pats his cheek* You have a great day.
         <br /><br />
 
@@ -948,3 +977,18 @@
 </body>
 
 </html>
+
+
+<!-- To be honest, I don't really understand this, I just wanted to add a little. bit of javascript -->
+<script>
+    const slowImages = document.querySelectorAll('.slow-scroll');
+
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.pageYOffset;
+
+        slowImages.forEach(img => {
+            const scrollSpeed = .4;
+            img.style.transform = `translateY(${scrollTop * scrollSpeed}px)`;
+        });
+    });
+</script>
