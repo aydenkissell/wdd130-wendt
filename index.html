@@ -1,211 +1,107 @@
-<!-- =============================
-LEGEND OF THE SIX — FULL SITE FILES
-Includes: index.html, episodes.html, artwork.html, about.html, other-projects.html, character-inspiration.html, and style.css
-All combined in one document for easy copy/paste.
-============================= -->
-
-<!-- =============================
-        STYLE.CSS
-============================= -->
-
-
-<!-- =============================
-         INDEX.HTML — HOMEPAGE
-============================= -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legend of the Six - Home</title>
   <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-<header>Legend of the Six</header>
-<nav>
-  <a href="index.html">Home</a>
-  <a href="episodes.html">Episodes</a>
-  <a href="artwork.html">Artwork</a>
-  <a href="other-projects.html">Other Projects</a>
-  <a href="character-inspiration.html">Character Inspiration</a>
-  <a href="about.html">About Author</a>
-</nav>
-<div class="hero">A New Fantasy Adventure Begins</div>
+<header>
+  <img src="logo.jpg" alt="Legend of the Six Logo" class="corner-logo">
+  <h1>Legend of the Six</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="episodes.html">Episodes</a>
+    <a href="artwork.html">Artwork</a>
+    <a href="about.html">About Author</a>
+  </nav>
+</header>
 
-<section>
-  <h2>Welcome</h2>
-  <p>Looking for a new job, Kasai Yama stumbles into a sleepy little bookstore… except nothing about it is normal. What follows kicks off a supernatural adventure with six teens discovering powers, portals, and a very mysterious shopkeeper.</p>
+<section id="hero" class="parallax">
+  <div class="hero-content">
+    <h2>A New Fantasy Adventure Begins</h2>
+    <p>Discover the magic hidden in an ordinary bookstore</p>
+  </div>
 </section>
 
-<section>
-<h2>Main Characters</h2>
-<div class="grid">
 
-  <div class="card">
-    <img src="https://picsum.photos/seed/kasai/500/500">
-    <h3>Kasai Yama</h3>
-    <p>Responsible, level-headed, and way too stressed for a 19-year-old.</p>
+<!-- Welcome Section -->
+<section class="welcome">
+  <h2>Welcome to Legend of the Six</h2>
+  <p>Looking for a new job, Kasai Yama comes across a sleepy job in a normal looking bookstore. Well, he thought it was normal. Through this new job, Kasai and his friends discover just how fairytale-like the owner is and the secret he keeps is just the beginning.</p>
+</section>
+
+<!-- Meet the Characters Section -->
+<section id="characters">
+  <h2>Meet the Characters</h2>
+  
+  <div class="character-grid-wireframe">
+    <!-- Featured Character - Kasai -->
+    <div class="character-card featured-large">
+      <div class="card-image">
+        <img src="images/kasai.jpg" alt="Kasai Yama">
+      </div>
+      <div class="card-content">
+        <h3>Kasai Yama</h3>
+        <p>Born into a rich family, 19 year old Kasai broke away from his Japanese heritage to live in America with his Korean grandmother. Even though he would rather be carefree and spend time helping his grandmother, Kasai is forced to be the adult in his friend group. Especially when their powers are put to the test against something they have never faced before.</p>
+      </div>
+    </div>
+
+    <!-- Gabriel Smith -->
+    <div class="character-card">
+      <div class="card-image">
+        <img src="images/gabriel.jpg" alt="Gabriel Smith">
+      </div>
+      <div class="card-content">
+        <h3>Gabriel Smith</h3>
+        <p>This fun-loving guy is all about the spotlight! Being 17, Gabriel disregards any sense of responsibility when it comes to magic.</p>
+      </div>
+    </div>
+
+    <!-- Renee Malker -->
+    <div class="character-card">
+      <div class="card-image">
+        <img src="images/renee.jpg" alt="Renee Malker">
+      </div>
+      <div class="card-content">
+        <h3>Renee Malker</h3>
+        <p>At 16 years old, this smart cookie is already ahead of her academic and magical career. Tender-hearted and thoughtful.</p>
+      </div>
+    </div>
+
+    <!-- Lucas King -->
+    <div class="character-card">
+      <div class="card-image">
+        <img src="images/lucas.jpg" alt="Lucas King">
+      </div>
+      <div class="card-content">
+        <h3>Lucas King</h3>
+        <p>A military brat at 18 years old, Lucas is the complete opposite of his battle hardened father. He gets quite nervous.</p>
+      </div>
+    </div>
   </div>
 
-  <div class="card">
-    <img src="https://picsum.photos/seed/gabe/500/500">
-    <h3>Gabriel Smith</h3>
-    <p>Chaos incarnate. But lovable. Usually.</p>
+  <!-- View All Characters Link -->
+  <div class="view-all">
+    <a href="artwork.html" class="btn-view-all">View All Characters →</a>
   </div>
+</section>
 
-  <div class="card">
-    <img src="https://picsum.photos/seed/renee/500/500">
-    <h3>Renee Malker</h3>
-    <p>Smart, steady, and way more mature than the rest of the group.</p>
-  </div>
-
-  <div class="card">
-    <img src="https://picsum.photos/seed/lucas/500/500">
-    <h3>Lucas King</h3>
-    <p>Anxious but loyal, with powers that freak him out.</p>
-  </div>
-
-  <div class="card">
-    <img src="https://picsum.photos/seed/anauel/500/500">
-    <h3>Anauel Smith</h3>
-    <p>Chill, grounded, and the group’s voice of reason.</p>
-  </div>
-
-  <div class="card">
-    <img src="https://picsum.photos/seed/ryan/500/500">
-    <h3>Ryan Malker</h3>
-    <p>Sweet 12-year-old with fire magic he definitely didn’t ask for.</p>
-  </div>
-
-</div>
+<!-- Newsletter Signup -->
+<section class="newsletter">
+  <h2>Join the Notification List</h2>
+  <p>Get updates when new episodes are released!</p>
+  <form class="newsletter-form">
+    <input type="email" placeholder="Enter your email" required>
+    <button type="submit">Subscribe</button>
+  </form>
 </section>
 
 <footer>
-© 2025 Legend of the Six — Website Demo
+  <p>&copy; 2025 Legend of the Six</p>
 </footer>
-</body>
-</html>
 
-
-<!-- =============================
-         ARTWORK.HTML
-============================= -->
-<!DOCTYPE html>
-<html>
-<head><title>Artwork — Legend of the Six</title></head>
-<body>
-<header>Legend of the Six — Artwork</header>
-<nav>
-  <a href="index.html">Home</a>
-  <a href="episodes.html">Episodes</a>
-  <a href="artwork.html">Artwork</a>
-  <a href="other-projects.html">Other Projects</a>
-  <a href="character-inspiration.html">Character Inspiration</a>
-  <a href="about.html">About Author</a>
-</nav>
-<section>
-<h2>Character Artwork Gallery</h2>
-<p>Replace each picture with your artist’s actual drawings later.</p>
-<div class="grid">
-
-  <div class="card">
-    <img src="https://picsum.photos/seed/art1/600/600">
-    <h3>Kasai Artwork</h3>
-  </div>
-
-  <div class="card">
-    <img src="https://picsum.photos/seed/art2/600/600">
-    <h3>Gabriel Artwork</h3>
-  </div>
-
-  <div class="card">
-    <img src="https://picsum.photos/seed/art3/600/600">
-    <h3>Renee Artwork</h3>
-  </div>
-
-  <div class="card">
-    <img src="https://picsum.photos/seed/art4/600/600">
-    <h3>Lucas Artwork</h3>
-  </div>
-
-  <div class="card">
-    <img src="https://picsum.photos/seed/art5/600/600">
-    <h3>Anauel Artwork</h3>
-  </div>
-
-  <div class="card">
-    <img src="https://picsum.photos/seed/art6/600/600">
-    <h3>Ryan Artwork</h3>
-  </div>
-
-</div>
-</section>
-</body>
-</html>
-
-
-<!-- =============================
-      CHARACTER-INSPIRATION.HTML
-============================= -->
-<!DOCTYPE html>
-<html>
-<head><title>Character Inspiration</title></head>
-<body>
-<header>Legend of the Six — Character Inspiration</header>
-<nav>
-  <a href="index.html">Home</a>
-  <a href="episodes.html">Episodes</a>
-  <a href="artwork.html">Artwork</a>
-  <a href="other-projects.html">Other Projects</a>
-  <a href="character-inspiration.html">Character Inspiration</a>
-  <a href="about.html">About Author</a>
-</nav>
-<section>
-<h2>Character Inspiration</h2>
-<p>You can place reference photos, mood boards, and descriptions here.</p>
-</section>
-</body>
-</html>
-
-
-<!-- =============================
-       OTHER-PROJECTS.HTML
-============================= -->
-<!DOCTYPE html>
-<html>
-<head><title>Other Projects</title></head>
-<body>
-<header>Other Projects</header>
-<nav>
-  <a href="index.html">Home</a>
-  <a href="episodes.html">Episodes</a>
-  <a href="artwork.html">Artwork</a>
-  <a href="other-projects.html">Other Projects</a>
-  <a href="character-inspiration.html">Character Inspiration</a>
-  <a href="about.html">About Author</a>
-</nav>
-<section>
-<h2>The Crescent Island</h2>
-<p>Description of Kaity’s other book + link + artwork.</p>
-</section>
-</body>
-</html>
-
-
-<!-- =============================
-           ABOUT.HTML
-============================= -->
-<!DOCTYPE html>
-<html>
-<head><title>About the Author</title></head>
-<body>
-<header>About the Author</header>
-<nav>
-  <a href="index.html">Home</a>
-  <a href="episodes.html">Episodes</a>
-  <a href="artwork.html">Artwork</a>
-  <a href="other-projects.html">Other Projects</a>
-  <a href="character-inspiration.html">Character Inspiration</a>
-  <a href="about.html">About Author</a>
-</nav>
-<section>
-<h2>Kaity — Author of Legend of the Six</h2>
-<p>Born into a creative family, Kaity has always been immersed in art, writing, and imagination...</p>
-</section>
 </body>
 </html>
